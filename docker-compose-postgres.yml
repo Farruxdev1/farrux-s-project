@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  database:
+    image: 'postgres:latest'
+    container_name: postgres_container
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: nest
+      POSTGRES_PASSWORD: nest
+      POSTGRES_DB: nest
+    volumes:
+      - "/Users/farruxrajabov/Desktop/project/mikroOrm/pgdata:/var/lib/postgresql/data"
